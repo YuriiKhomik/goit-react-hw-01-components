@@ -2,7 +2,7 @@ export const theme = Object.freeze({
   colors: {
     black: '#000000',
     grey: '#808080',
-    background: '#ffffff',
+    backgroundGrey: '#e8ebed',
     primary: '#07c',
     secondary: '#05a',
     accent: '#609',
@@ -20,7 +20,7 @@ export const theme = Object.freeze({
   fontSizes: {
     xs: 12,
     s: 14,
-    m: 16,
+    m: 22,
     l: 32,
     xl: 64,
   },
