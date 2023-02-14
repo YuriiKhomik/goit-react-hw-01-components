@@ -55,6 +55,9 @@ export const UserStats = styled.ul`
   font-weight: ${p => p.theme.fontWeights.normal};
   font-size: ${p => p.theme.fontSizes.m}px;
   line-height: ${p => p.theme.lineHeights.body};
+  li:not(:first-child) {
+    border-left: ${p => p.theme.borders.normal} ${p => p.theme.colors.grey};
+  }
 `;
 
 export const UserStatsItem = styled.li`
@@ -62,21 +65,22 @@ export const UserStatsItem = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-width: 110px;
+  width: 100%;
   min-height: 100px;
+  border-top: ${p => p.theme.borders.normal} ${p => p.theme.colors.grey};
   font-weight: ${p => p.theme.fontWeights.normal};
   font-size: ${p => p.theme.fontSizes.m}px;
   color: ${p => p.theme.colors.grey};
 `;
 
 export const Label = styled.span`
-  color: ${p => p.theme.colors.black};
-  font-weight: ${p => p.theme.fontWeights.bold};
+  color: ${p => p.theme.colors.grey};
+  font-weight: ${p => p.theme.fontWeights.normal};
 `;
 
 export const Quantity = styled.span`
-  color: ${p => p.theme.colors.grey};
-  font-weight: ${p => p.theme.fontWeights.normal};
+  color: ${p => p.theme.colors.black};
+  font-weight: ${p => p.theme.fontWeights.bold};
   font-size: ${p => p.theme.fontSizes.m}px;
   line-height: ${p => p.theme.lineHeights.body};
 `;

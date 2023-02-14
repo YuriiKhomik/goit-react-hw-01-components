@@ -10,13 +10,15 @@ import {
   Label,
   Quantity,
 } from './Profile.styled';
-import { user } from 'components/Profile/user';
 
 export const Profile = () => {
   return (
     <StyledProfile>
       <DescriptionArea>
-        <UserImage src={user.avatar} alt="User avatar" />
+        <UserImage
+          src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
+          alt="User avatar"
+        />
         <UserName>Petra Marica</UserName>
         <UserTag>@pmarica</UserTag>
         <UserLocation>Salvador, Brasil</UserLocation>
