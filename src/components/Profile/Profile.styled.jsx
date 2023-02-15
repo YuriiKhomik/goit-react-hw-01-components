@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const StyledProfile = styled.div`
   padding-top: ${p => p.theme.space[4]}px;
   min-width: 380px;
+  border-radius: ${p => p.theme.radii.normal};
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   StyledProfile,
   DescriptionArea,
@@ -11,33 +12,51 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export const Profile = () => {
+export const Profile = p => {
+  const {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  } = p.userData;
   return (
     <StyledProfile>
       <DescriptionArea>
-        <UserImage
-          src="https://cdn-icons-png.flaticon.com/512/2922/2922506.png"
-          alt="User avatar"
-        />
-        <UserName>Petra Marica</UserName>
-        <UserTag>@pmarica</UserTag>
-        <UserLocation>Salvador, Brasil</UserLocation>
+        <UserImage src={avatar} alt={username} />
+        <UserName>{username}</UserName>
+        <UserTag>{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
       </DescriptionArea>
 
       <UserStats>
         <UserStatsItem>
-          <Label className="label">Followers</Label>
-          <Quantity className="quantity">1000</Quantity>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
         </UserStatsItem>
         <UserStatsItem>
-          <Label className="label">Views</Label>
-          <Quantity className="quantity">2000</Quantity>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
         </UserStatsItem>
         <UserStatsItem>
-          <Label className="label">Likes</Label>
-          <Quantity className="quantity">3000</Quantity>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
         </UserStatsItem>
       </UserStats>
     </StyledProfile>
   );
+};
+
+Profile.propTypes = {
+  userData: PropTypes.exact({
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    stats: PropTypes.exact({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    }),
+  }),
 };

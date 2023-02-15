@@ -13,7 +13,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Profile />
+      <Profile userData={user} />
     </div>
   );
 };
