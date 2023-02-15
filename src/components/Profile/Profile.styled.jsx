@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 
-export const StyledProfile = styled.div`
-  padding-top: ${p => p.theme.space[4]}px;
-  min-width: 380px;
-  border-radius: ${p => p.theme.radii.normal};
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-`;
+// export const StyledProfile = styled.div`
+//   padding-top: ${p => p.theme.space[4]}px;
+//   min-width: 380px;
+//   border-radius: ${p => p.theme.radii.normal};
+//   box-shadow: ${p => p.theme.shadows.main};
+// `;
 
-export const DescriptionArea = styled.div`
-  text-align: center;
-`;
+// // used Box-conponent insted
+// export const DescriptionArea = styled.div`
+//   text-align: center;
+// `;
+
+// style={{
+//     height: '100vh',
+//     display: 'flex',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     fontSize: 40,
+//     color: '#010101',
+//   }}
 
 export const UserImage = styled.img`
   margin-left: auto;

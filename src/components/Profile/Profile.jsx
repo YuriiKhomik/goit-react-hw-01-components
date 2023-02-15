@@ -1,7 +1,6 @@
+import { Box } from 'components/Box/Box';
 import PropTypes from 'prop-types';
 import {
-  StyledProfile,
-  DescriptionArea,
   UserImage,
   UserName,
   UserTag,
@@ -12,22 +11,21 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export const Profile = p => {
-  const {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  } = p.userData;
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, views, likes },
+}) => {
   return (
-    <StyledProfile>
-      <DescriptionArea>
+    <Box pt="4" minWidth="380px" borderRadius="normal" boxShadow="main">
+      <Box textAlign="center">
         <UserImage src={avatar} alt={username} />
         <UserName>{username}</UserName>
         <UserTag>{tag}</UserTag>
         <UserLocation>{location}</UserLocation>
-      </DescriptionArea>
+      </Box>
 
       <UserStats>
         <UserStatsItem>
@@ -43,20 +41,18 @@ export const Profile = p => {
           <Quantity>{likes}</Quantity>
         </UserStatsItem>
       </UserStats>
-    </StyledProfile>
+    </Box>
   );
 };
 
 Profile.propTypes = {
-  userData: PropTypes.exact({
-    username: PropTypes.string.isRequired,
-    tag: PropTypes.string.isRequired,
-    location: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
-      followers: PropTypes.number.isRequired,
-      views: PropTypes.number.isRequired,
-      likes: PropTypes.number.isRequired,
-    }),
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.exact({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
   }),
 };

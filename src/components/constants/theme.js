@@ -41,4 +41,7 @@ export const theme = Object.freeze({
     normal: '4px',
     round: '50%',
   },
+  shadows: {
+    main: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+  },
 });
