@@ -1,4 +1,5 @@
 import { Box } from 'components/Box/Box';
+import PropTypes from 'prop-types';
 import { StatItem } from './StatItem/StatItem';
 import { getRandomHexColor } from 'utils/getRandomHexColor';
 
@@ -38,4 +39,15 @@ export const Statistics = ({ title, stats }) => {
       </Box>
     </Box>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };
