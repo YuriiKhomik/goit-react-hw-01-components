@@ -1,8 +1,8 @@
 import { Box } from './Box/Box';
-// import { Profile } from './Profile/Profile';
-// import user from 'components/Profile/user';
-// import { Statistics } from './Statistics/Statistics';
-// import data from 'components/Statistics/data';
+import { Profile } from './Profile/Profile';
+import user from 'components/Profile/user';
+import { Statistics } from './Statistics/Statistics';
+import data from 'components/Statistics/data';
 import { FriendList } from './FriendList/FriendList';
 import friends from './FriendList/friends';
 
