@@ -9,7 +9,8 @@ import friends from './FriendList/friends';
 export const App = () => {
   return (
     <Box
-      height="100vh"
+      pt="5"
+      pb="5"
       display="flex"
       justifyContent="center"
       alignItems="center"
