@@ -5,6 +5,8 @@ import { Statistics } from './Statistics/Statistics';
 import data from 'components/Statistics/data';
 import { FriendList } from './FriendList/FriendList';
 import friends from './FriendList/friends';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
+import transactions from './TransactionHistory/transactions';
 
 export const App = () => {
   return (
@@ -16,16 +18,10 @@ export const App = () => {
       alignItems="center"
       flexDirection="column"
     >
-      <Profile
-        username={user.username}
-        tag={user.tag}
-        location={user.location}
-        avatar={user.avatar}
-        stats={user.stats}
-      />
+      <Profile user={user} />
       <Statistics title="Upload stats" stats={data} />
-
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </Box>
   );
 };
