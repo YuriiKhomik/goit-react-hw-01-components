@@ -1,12 +1,12 @@
 import { Box } from './Box/Box';
 import { Profile } from './Profile/Profile';
-import user from 'components/Profile/user';
 import { Statistics } from './Statistics/Statistics';
-import data from 'components/Statistics/data';
 import { FriendList } from './FriendList/FriendList';
-import friends from './FriendList/friends';
 import { TransactionHistory } from './TransactionHistory/TransactionHistory';
-import transactions from './TransactionHistory/transactions';
+import user from 'data/user';
+import data from 'data/statisticsData';
+import friends from 'data/friends';
+import transactions from 'data/transactions';
 
 export const App = () => {
   return (
@@ -18,7 +18,13 @@ export const App = () => {
       alignItems="center"
       flexDirection="column"
     >
-      <Profile user={user} />
+      <Profile
+        userName={user.username}
+        tag={user.tag}
+        location={user.location}
+        avatar={user.avatar}
+        stats={user.stats}
+      />
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />

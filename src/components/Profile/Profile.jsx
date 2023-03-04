@@ -11,13 +11,12 @@ import {
   Quantity,
 } from './Profile.styled';
 
-export const Profile = p => {
-  const { username, tag, location, avatar, stats } = p.user;
+export const Profile = ({ userName, tag, location, avatar, stats }) => {
   return (
     <Box pt="4" minWidth="380px" borderRadius="normal" boxShadow="main">
       <Box textAlign="center">
-        <UserImage src={avatar} alt={username} />
-        <UserName>{username}</UserName>
+        <UserImage src={avatar} alt={userName} />
+        <UserName>{userName}</UserName>
         <UserTag>{tag}</UserTag>
         <UserLocation>{location}</UserLocation>
       </Box>

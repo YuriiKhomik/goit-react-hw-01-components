@@ -1,6 +1,6 @@
 import { Box } from 'components/Box/Box';
 import PropTypes from 'prop-types';
-import { StatItem } from './StatItem/StatItem';
+import { StatItem } from 'components/StatItem/StatItem';
 import { getRandomHexColor } from 'utils/getRandomHexColor';
 
 export const Statistics = ({ title, stats }) => {
